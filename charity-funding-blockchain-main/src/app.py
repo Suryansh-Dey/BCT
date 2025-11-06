@@ -7,7 +7,7 @@ web3=Web3(HTTPProvider('http://127.0.0.1:7545'))
 web3.eth.default_account = web3.eth.accounts[0]
 
 compiled_contract_path='./build/contracts/register.json'
-deployed_contract_address='0xaaB498A19590544A563a3F7C611a97fD81ff1789'
+deployed_contract_address='0x054F267F638C114897cd5480fE624319d48690Bd'
 
 with open(compiled_contract_path) as file:
     contract_json=json.load(file)

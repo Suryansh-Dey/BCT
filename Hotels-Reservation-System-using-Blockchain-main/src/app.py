@@ -3,8 +3,8 @@ from web3 import Web3,HTTPProvider
 import json
 import os
 
-register_contract_address='0x1C882D05dB8147E8954Ffa6633750cd54A229762'
-rooms_contract_address='0xA5B744635D10939D7445cA975C1bf0B967de59Ec'
+register_contract_address='0x19C6091A9618d1BF67bD73D2EffC1f69A5450D07'
+rooms_contract_address='0xE1FCeF660A55809db6C53d46CF340Bd18b23C9EB'
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
