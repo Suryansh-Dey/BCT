@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Charity Funding using Blockchain</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+   .card {
+       top:25%;
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       min-width: 0;
+       word-wrap: break-word;
+       background-color: rgb(209, 124, 26);
+       background-clip: border-box;
+       border: 1px solid rgba(0,0,0,.125);
+       border-radius: .25rem;
+       width: fit-content;
+   }
+   
+   .card-text{
+       font-size:14px;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       overflow: hidden;
+       color: white;
+   }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Charity Funding using Blockchain</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/needers">Create Funding</a></li>
+      <li class="active"><a href="/campaigns">Funding Campaigns</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+{%if result is defined%}
+<div class="py-5">
+    <div class="container">
+      {%for i in range(0, len)%}
+          {%if i%2==0 %}
+              <div class="row hidden-md-up">
+          {%endif%}
+          <div class="col-12 col-sm-6">
+              <div class="card">
+                  <div class="card-block">
+                      <h4 class="card-title">Needers</h4>
+                      <p class="card-text">Posted by {{result[i][1]}}</h6>
+                      <p class="card-text ">PhonePe: {{result[i][0]}}</p>
+                      <p class="card-text">Place: {{result[i][2]}}</p>
+                      <p class="card-text">Wallet: {{result[i][3]}}</a>
+                      <p class="card-text">Link to Pay: <a href="https://rzp.io/l/Jl6vXLsrLa" target="_blank">Click Here</a></p>
+                        
+                  </div>
+              </div>
+          </div>
+          {%if (i+1)%2==0 %}
+          </div>
+          <br/>
+          {%endif%}
+      {%endfor%}
+      </div>
+    </div>
+</div>
+{% endif %}
+</body>
+</html>

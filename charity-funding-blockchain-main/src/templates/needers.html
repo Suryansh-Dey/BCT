@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Charity Funding using Blockchain</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Charity Funding using Blockchain</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href="/needers">Create Funding</a></li>
+      <li><a href="/campaigns">Funding Campaigns</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2>Create Needy</h2>
+            <form action="/createNeedy" method="POST">
+                <div class="form-group">
+                    <label for="name">Enter needy's Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter needy's Name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Enter needy's Place:</label>
+                    <input type="text" class="form-control" id="place" placeholder="Enter needy's Place" name="place">
+                </div>
+                <div class="form-group">
+                    <label for="name">Enter needy's phonepe:</label>
+                    <input type="text" class="form-control" id="phonepe" placeholder="Enter needy's phonepe" name="phonepe">
+                </div>
+                <div class="form-group">
+                    <label for="name">Enter needy's Wallet:</label>
+                    <input type="text" class="form-control" id="wallet" placeholder="Enter needy's Wallet" name="wallet">
+                </div>
+                <input type="submit" value="Create Needy" />
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+</div> <br/><br/>
+{%if result is defined%}
+<div class="container">
+    <center><span style="color:blue">{{result}}</span></center>
+</div>
+{% endif %}
+</body>
+</html>
